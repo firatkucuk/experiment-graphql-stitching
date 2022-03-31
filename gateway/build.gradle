@@ -1,0 +1,32 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.0-M1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+properties {
+
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.spring.io/milestone' }
+    maven { url 'https://packages.atlassian.com/maven/public' }
+}
+
+dependencies {
+    implementation "com.atlassian.braid:graphql-braid:0.23.12"
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:'
+    implementation 'com.graphql-java:graphql-java:11.0'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

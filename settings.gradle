@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        maven { url 'https://repo.spring.io/milestone' }
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'graphql-federation'
+
+include ':project-1'
+include ':project-2'
+include ':gateway'
